@@ -513,8 +513,8 @@ function SpectrumAPI.get_xmult_joker()
     return tbl
 end
 
-function SpectrumAPI.get_planet()
-    local tbl = SpectrumAPI.content.planets.top
+function SpectrumAPI.get_planet(hand)
+    local tbl = (SpectrumAPI.content.planets[hand] or {}).top
     return tbl
 end
 
