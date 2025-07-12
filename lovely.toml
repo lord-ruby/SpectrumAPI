@@ -1,0 +1,81 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = -1
+
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS _ "src/game_object.lua"]'''
+pattern = '''assert(o.mod == nil, "Created object should not have \"mod\" field defined.")'''
+position = "at"
+payload = '''
+
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS Bunco "Bunco.lua"]'''
+pattern = '''SMODS.Consumable{ -- Quaoar'''
+position = "at"
+payload = '''
+SpectrumAPI.add_content({ priority=0,
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS Bunco "Bunco.lua"]'''
+pattern = '''SMODS.Consumable{ -- Haumea'''
+position = "at"
+payload = '''
+, {hand="spa_Spectrum"})
+SpectrumAPI.add_content({ priority=0,
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS Bunco "Bunco.lua"]'''
+pattern = '''SMODS.Consumable{ -- Sedna'''
+position = "at"
+payload = '''
+, {hand="spa_Straight_Spectrum"})
+SpectrumAPI.add_content({ priority=0,
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS Bunco "Bunco.lua"]'''
+pattern = '''SMODS.Consumable{ -- Makemake'''
+position = "at"
+payload = '''
+, {hand="spa_Spectrum_House"})
+SpectrumAPI.add_content({ priority=0,
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS Bunco "Bunco.lua"]'''
+pattern = '''-- Spectrals'''
+position = "at"
+payload = '''
+, {hand="spa_Spectrum_Five"})
+
+-- Spectrals
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS Bunco "Bunco.lua"]'''
+pattern = '''local function create_joker(joker)'''
+position = "at"
+payload = '''
+function create_joker(joker)
+    if SpectrumAPI.create_joker(joker) then return end
+'''
+match_indent = true
+

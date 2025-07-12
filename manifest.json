@@ -1,0 +1,21 @@
+{
+    "name": "Spectrum API",
+    "id": "SpectrumAPI",
+    "version": "1.0.0",
+    "website_url": "",
+    "description": "An API mod designed to consolidate Spectrum Functionality and simplify crossmod",
+    "prefix": "spa",
+    "author": ["ruby"],
+    "main_file": "main.lua",
+    "priority": -100000,
+    "badge_colour": "ff0000",
+    "dependencies": [
+        "Steamodded"
+    ],
+    "conflicts" : [
+        "SpectrumFramework"
+    ],
+    "provides": [
+        "SpectrumFramework"
+    ]
+}
