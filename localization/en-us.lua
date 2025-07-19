@@ -44,7 +44,7 @@ return {
                 "A hand containing a Full House",
                 "a Spectrum, and a Flush"
             },
-            ["spa_Straight_Flush_Five"] = {
+            ["spa_Flush_Spectrum_Five"] = {
                 "A hand containing Five of a Kind",
                 "a Spectrum, and a Flush"
             },
